@@ -13,9 +13,11 @@ https://docs.google.com/presentation/d/1eMJL074GPIWG632bq72NU0wc4I8jE1y9G-UZ-vU5
 The homework assumes that you have a working knowledge of python and that your
 workstation can run python code. It also makes use of regular
 expressions, but it provides the regexes to use, to keep the focus on
-the process instead of irrelevant details. It should take you about
-30-60 minutes if you read the directions carefully and follow good TDD
-practice.
+the process instead of irrelevant details. (If you need to debug regexes,
+you might try [regex101.com](https://regex101.com/).)
+
+It should take you about an hour to do this work if you read the directions
+carefully and follow good TDD practice.
 
 ### Scenario
 
@@ -42,16 +44,16 @@ Test-Driven Development (TDD).
 
 ### Assignment
 1. Without opening `library.py`, spend a couple minutes studying the code
-   in [`library_test.py`](library_test.py). Notice the 2 unit tests. Run the tests on your
-   local machine (`python library_test.py -v`) and confirm that they pass.
+   in [`library_test.py`](library_test.py). Notice the 3 unit tests. Run
+   the tests on your local machine (`python library_test.py -v`) and
+   confirm that they pass.
 
 2. Still without opening `library.py` at all, write a test that checks
    whether your code correctly extracts "2015-07-25" as a date from a
    sentence of text. You might copy and paste from `test_integers()`...
-   Assume that 'I was born on 2015-07-25.' is the first argument to
-   `assert_extract` (the string to scan), and `library.dates` is the
-   second argument (just as `library.integers` is the second argument to
-   that function in one of the other unit tests). 
+   Use 'I was born on 2015-07-25.' as the first argument to
+   `assert_extract` (the string to scan), and `library.dates_iso8601` as the
+   second argument. 
 
 3. Run your test.
 
@@ -73,7 +75,7 @@ Test-Driven Development (TDD).
 4. Now open [`library.py`](library.py) and create a new extractor method by copying
    and pasting the `mixed_ordinals()` function and renaming it to
    `dates_iso8601()`. Create a new regex to match dates: `_date_iso8601_pat
-   = _whole_word(r'\d{4}-\d{2}-\d{2'))`. Modify the body of `dates_iso8601()`
+   = _whole_word(r'\d{4}-\d{2}-\d{2}')`. Modify the body of `dates_iso8601()`
    so it uses this new pattern, and so it returns a tuple where the
    first member is `'date'`.
 
@@ -82,7 +84,9 @@ Test-Driven Development (TDD).
 6. You don't want to match sequences where the middle number in the
    date is greater than 12 (December), or where the final number in the
    date is greater than 31. Write a new test that checks whether your
-   function correctly ignores such values. Observe the test fail.
+   function correctly ignores such values. You might want to copy from
+   `test_no_integers()`, which shows how to assert that no values are
+   returned. Observe the test fail.
 
    At this point, Alice comes by again. If you've followed procedure
    exactly, such that you have a failing test, proceed. Otherwise, go
@@ -98,7 +102,7 @@ Test-Driven Development (TDD).
 
 9. Now implement a function that matches such dates. Use the following regex:
 
-   ```_whole_word(r'\d{2} (J[au]n|Feb|Ma[ry]|Apr|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}'```.
+   ```_whole_word(r'\d{2} (J[au]n|Feb|Ma[ry]|Apr|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}')```
 
    Confirm that all tests pass.
 

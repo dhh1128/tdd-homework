@@ -26,5 +26,10 @@ class TestCase(unittest.TestCase):
     def test_integers(self):
         self.assert_extract(NUM_CORPUS, library.integers, '1845', '15', '20', '80')
 
+    # Third unit test; prove that if we look for integers where there are none, we get no results.
+    def test_no_integers(self):
+        self.assert_extract("no integers", library.integers)
+
+
 if __name__ == '__main__':
     unittest.main()
