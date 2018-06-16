@@ -1,5 +1,18 @@
 # tdd-homework
 
+This homework teaches you the `write test -> prove failure -> fix code -> prove success`
+cycle and the `refactor -> prove all tests pass` cycle at the heart of
+Test-Driven Development (TDD):
+
+![TDD cycles](tdd-cycles.png)
+
+It assumes that you have a rough working knowledge of python and that
+your workstation can run python code. It also makes use of regular
+expressions, but it tells you what expressions to use, to keep the
+focus on the process instead of irrelevant details. It should take you
+about 30-60 minutes if you read the directions carefully and follow
+TDD practice.
+
 ### Scenario
 
 Imagine that you are maintaining natural language processing (NLP) library
@@ -78,14 +91,18 @@ Test-Driven Development (TDD).
    that checks whether the code extracts that type of date. Confirm that
    the test fails.
 
-9. Now implement a function that matches such dates. You can use the
-   following regex:
+9. Now implement a function that matches such dates. Use the following regex:
 
-   ```_whole_word(r'\d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}'```.
+   ```_whole_word(r'\d{2} (J[au]n|Feb|Ma[ry]|Apr|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}'```.
 
    Confirm that all tests pass.
 
-10. Now Alice comes by again. She gives you a pat on the back when she sees
+10. Now you decide that you don't like the readability of this last regex
+    that you added; stuff like `J[au]n` and `Ma[ry]` would be better
+    expanded for simplicity. Refactor the regex and confirm that all the
+    tests still pass.
+
+11. Now Alice comes by again. She gives you a pat on the back when she sees
     your demo and your tests. You're doing TDD! However, she gives you some
     new requirements:
 
@@ -98,16 +115,16 @@ Test-Driven Development (TDD).
       (for "Zulu" or UTC), or an offset like "-0800".
     * When you're matching the other date format, you should match dates
       that have a comma after the month, as in "25 Jun, 2017".
+    * When you're extracting numbers, you should support comma-separated
+      groupings, as in "123,456,789".
 
-    With these new requirements in mind, imagine at least 10 new tests
+    With these new requirements in mind, imagine at least 20 new tests
     that you will have to write. Code the tests. (In pure TDD, you would
-    code them one at a time, but for this exercise we'll have you code
-    them all at once.)
+    normally code them one at a time, but for this exercise we'll have you
+    code them all at once.)
 
-11. Besides these new tests, think of at least one additional test for
-    number extraction that ought to be written, that would fail for the
-    code in its current form. Write that test as well.
+12. Run the tests and confirm that all of these new tests actually fail.
 
-12. Save your work, commit your code to git, and submit it to your
+13. Save your work, commit your code to git, and submit it to your
     repo. Show the tests to a friend and ask them if they can think
     of any tests you missed.
