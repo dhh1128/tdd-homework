@@ -42,7 +42,7 @@ Test-Driven Development (TDD).
 
 ### Assignment
 1. Without opening `library.py`, spend a couple minutes studying the code
-   in `library_test.py`. Notice the 2 unit tests. Run the tests on your
+   in [`library_test.py`](library_test.py). Notice the 2 unit tests. Run the tests on your
    local machine (`python library_test.py -v`) and confirm that they pass.
 
 2. Still without opening `library.py` at all, write a test that checks
@@ -69,7 +69,7 @@ Test-Driven Development (TDD).
    state and start over; you are not following the TDD process, and
    Alice isn't happy.
 
-4. Now open `library.py` and create a new extractor method by copying
+4. Now open [`library.py`](library.py) and create a new extractor method by copying
    and pasting the `mixed_ordinals()` function and renaming it to
    `dates_iso8601()`. Create a new regex to match dates: `_date_iso8601_pat
    = _whole_word(r'\d{4}-\d{2}-\d{2'))`. Modify the body of `dates_iso8601()`
