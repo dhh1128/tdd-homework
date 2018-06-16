@@ -12,13 +12,17 @@ trending toward 80.
 
 class TestCase(unittest.TestCase):
 
+    # Helper function
     def assert_extract(self, text, extractors, *expected):
         actual = [x[1].group(0) for x in library.scan(text, extractors)]
         self.assertEquals(str(actual), str([x for x in expected]))
 
+    # First unit test; prove that if we scan NUM_CORPUS looking for mixed_ordinals,
+    # we find "5th" and "1st".
     def test_mixed_ordinals(self):
         self.assert_extract(NUM_CORPUS, library.mixed_ordinals, '5th', '1st')
 
+    # Second unit test; prove that if we look for integers, we find four of them.
     def test_integers(self):
         self.assert_extract(NUM_CORPUS, library.integers, '1845', '15', '20', '80')
 

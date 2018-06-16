@@ -47,10 +47,11 @@ Test-Driven Development (TDD).
 
 2. Still without opening `library.py` at all, write a test that checks
    whether your code correctly extracts "2015-07-25" as a date from a
-   sentence of text. You might copy and paste from `test_ingegers()`...
-   Assume that `library.dates` is the second argument
-   to `assert_extract`, as `library.integers` is the second argument to
-   that function in one of the other unit tests.
+   sentence of text. You might copy and paste from `test_integers()`...
+   Assume that 'I was born on 2015-07-25.' is the first argument to
+   `assert_extract` (the string to scan), and `library.dates` is the
+   second argument (just as `library.integers` is the second argument to
+   that function in one of the other unit tests). 
 
 3. Run your test.
 
