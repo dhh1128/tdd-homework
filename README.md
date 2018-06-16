@@ -53,7 +53,7 @@ Test-Driven Development (TDD).
    sentence of text. You might copy and paste from `test_integers()`...
    Use 'I was born on 2015-07-25.' as the first argument to
    `assert_extract` (the string to scan), and `library.dates_iso8601` as the
-   second argument. 
+   second argument. [[hint](hint-step2.py)]
 
 3. Run your test.
 
@@ -77,7 +77,7 @@ Test-Driven Development (TDD).
    `dates_iso8601()`. Create a new regex to match dates: `_date_iso8601_pat
    = _whole_word(r'\d{4}-\d{2}-\d{2}')`. Modify the body of `dates_iso8601()`
    so it uses this new pattern, and so it returns a tuple where the
-   first member is `'date'`.
+   first member is `'date'`. [[hint](hint-step4.py)]
 
 5. Get all tests to pass.
 
@@ -94,17 +94,17 @@ Test-Driven Development (TDD).
 
 7. Make the test pass by modifying the definition of `_date_iso8601_pat`
    so its pattern is `_whole_word(r'\d{4}-(0\d|1[0-2])-(0[1-9]|[12][0-9]|3[01])')`.
-   Confirm that all tests pass.
+   Confirm that all tests pass. [[hint](hint-step7.py)]
 
 8. Now you want to handle dates in the format "25 Jan 2017". Write a test
    that checks whether the code extracts that type of date. Confirm that
-   the test fails.
+   the test fails. [[hint](hint-step8.py)]
 
 9. Now implement a function that matches such dates. Use the following regex:
 
    ```_whole_word(r'\d{2} (J[au]n|Feb|Ma[ry]|Apr|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}')```
 
-   Confirm that all tests pass.
+   Confirm that all tests pass. [[hint](hint-step9.py)]
 
 10. Now you decide that you don't like the readability of this last regex
     that you added; stuff like `J[au]n` and `Ma[ry]` would be better
