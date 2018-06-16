@@ -6,12 +6,16 @@ Test-Driven Development (TDD):
 
 ![TDD cycles](tdd-cycles.png)
 
-It assumes that you have a rough working knowledge of python and that
-your workstation can run python code. It also makes use of regular
-expressions, but it tells you what expressions to use, to keep the
-focus on the process instead of irrelevant details. It should take you
-about 30-60 minutes if you read the directions carefully and follow
-TDD practice.
+See [this slide deck](
+https://docs.google.com/presentation/d/1eMJL074GPIWG632bq72NU0wc4I8jE1y9G-UZ-vU5SIk/edit
+) for more information.
+
+The homework assumes that you have a working knowledge of python and that your
+workstation can run python code. It also makes use of regular
+expressions, but it provides the regexes to use, to keep the focus on
+the process instead of irrelevant details. It should take you about
+30-60 minutes if you read the directions carefully and follow good TDD
+practice.
 
 ### Scenario
 
@@ -125,6 +129,6 @@ Test-Driven Development (TDD).
 
 12. Run the tests and confirm that all of these new tests actually fail.
 
-13. Save your work, commit your code to git, and submit it to your
-    repo. Show the tests to a friend and ask them if they can think
-    of any tests you missed.
+13. Save your work, commit your code to git, and push it to your repo.
+    Show the tests to a friend and ask them if they can think of any
+    tests you missed.
