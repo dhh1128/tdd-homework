@@ -22,8 +22,5 @@ class TestCase(unittest.TestCase):
     def test_integers(self):
         self.assert_extract(NUM_CORPUS, library.integers, '1845', '15', '20', '80')
 
-    def test_dates(self):
-        self.assert_extract("I was born on 2015-07-25.", library.dates, '2015-07-25')
-
 if __name__ == '__main__':
     unittest.main()
