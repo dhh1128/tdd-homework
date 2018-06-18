@@ -1,5 +1,11 @@
 # tdd-homework
 
+Make sure you clone this repo to your local machine:
+
+  `git clone git@github.com:tdd-laboratory/tdd-homework-<your github handle>.git`
+
+You will be modifying code and submitting it to finish the assignment...
+
 This homework teaches you the `write test -> prove failure -> fix code -> prove success`
 cycle and the `refactor -> prove all tests pass` cycle at the heart of
 Test-Driven Development (TDD):
@@ -66,7 +72,7 @@ Test-Driven Development (TDD).
    you've written any code. You show it to her.
 
    If you have a single failing test at this point, and it's failing
-   because `library.dates` is undefined, and if you have not modified
+   because `library.dates_iso8601` is undefined, and if you have not modified
    `library.py` at all, then proceed to step 4; you are following TDD
    and Alice is happy. If not, please reset the repo to its initial
    state and start over; you are not following the TDD process, and
