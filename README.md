@@ -134,7 +134,8 @@ Test-Driven Development (TDD).
       groupings, as in "123,456,789".
 
     With these new requirements in mind, imagine at least 20 new tests
-    that you will have to write. Code the tests. (In pure TDD, you would
+    that you will have to write (10 if elapsed time on the homework
+    exceeds an hour). Code the tests. (In pure TDD, you would
     normally code them one at a time, but for this exercise we'll have you
     code them all at once.)
 
